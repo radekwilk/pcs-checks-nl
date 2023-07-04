@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="../css/main.css" />
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet" />
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="../css/all.css" />
+  <title>KFC Product control sheet check</title>
+</head>
+
+<body>
+
+  <!-- header -->
+  <header id="home">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark px-5">
+      <a href="#" class="navbar-brand">
+        <img src="../img/colonels_logo.png" alt="company logo" class="img-fluid" width="60" />
+      </a>
+      <button class="navbar-toggler" type="button" data-target="#myNavbar" data-toggle="collapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="navbar-nav mx-auto ">
+          <li class="nav-item mx-3">
+            <a href="../calculate.html#epcs" class="nav-link">ePCS</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="QPM_checker.html#qpm" class="nav-link">QPM</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="paper_pcs.html#pcs" class="nav-link">Paper PCS </a>
+          </li>
+          <li class="nav-item dropdown mx-3">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Instructions</a>
+            <div class="dropdown-menu">
+              <p class="text-center">Step-by-Step how to get:</p>
+              <div role="separator" class="dropdown-divider"></div>
+              <a class="dropdown-item" href="instructions.html#gsr">Gold Standard Report</a>
+              <a class="dropdown-item" href="instructions.html#fsr">Freshness Standard Report</a>
+              <a class="dropdown-item" href="instructions.html#pcr">Piece Count Report</a>
+              <a class="dropdown-item" href="instructions.html#dbsc">Daily Scorecard</a>
+            </div>
+          </li>
+          <li class="nav-item mx-3">
+            <a href="timers.html" class="nav-link">Speed of Services </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- end of navbar -->
+    <!-- banner section -->
+    <section id="banner" class="banner">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-10 mx-auto">
+            <div class="py-3 banner-center">
+              <h1 class="text-capitalize text-center mt-2 mt-lg-3">
+                Calculation of Product control systems:
+              </h1>
+              <h3 class="text-center mt-2">PCS - Paper version</h3>
+              <ul class="pcs-systems list-group d-none d-md-block">
+                <li class="pcs-systems-item">Electronic systems:
+                <li class="pcs-systems-item-inner">
+                  <a href="../calculate.html#epcs" class="pcs-systems-item-inner-link">
+                    <img src="../img/EPCS_example.jpg" alt="" width="80" class="img-fluid mt-3"> ePSC</a>
+                </li>
+                <li class="pcs-systems-item-inner">
+                  <a href="QPM_checker.html#qpm" class="pcs-systems-item-inner-link">
+                    <img src="../img/QPM_input.jpg" alt="" width="80" class="img-fluid mt-3"> QPM</a>
+                </li>
+                </li>
+                <li class="pcs-systems-item">Manual system (paper version):
+                <li class="pcs-systems-item-inner">
+                  <a href="#pcs" class="pcs-systems-item-inner-link">
+                    <img src="../img/pcs_sized.jpg" alt="" width="80" class="img-fluid mt-3"> PCS</a>
+                </li>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of banner section -->
+  </header>
+  <!-- end of header -->
+
+  <!-- info-cards section -->
+  <section id="info-cards" class="info-cards pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-10 mx-auto">
+          <h3 class="py-2 text-center">PCS - How does it looks like</h3>
+          <div class="row">
+            <div class="col-10 col-md-6 mt-2 mx-auto">
+              <!-- single info -->
+              <div class="card mb-2 h-100">
+                <img src="../img/pcs_sized.jpg" alt="PCS chart" class="card-img-top img-fluid">
+                <div class="card-body">
+                  <div class="card-title">
+                    <h5 class="mb-3">PCS </h5>
+                    <p>
+                      All cooked quantities are written on paper
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- end of single info -->
+            </div>
+            <div class="col-10 col-md-6 mt-2 mx-auto">
+              <!-- single info -->
+              <div class="card h-100">
+                <img src="../img/piece_count_example_sized.jpg" alt="piece count" class="card-img-top img-fluid">
+                <div class="card-body">
+                  <div class="card-title">
+                    <h5 class="mb-3">Piece count report </h5>
+                    <p>
+                      For instruction how to get it, click
+                      <a href="instructions.html#pcr" class="info-card-link" target="_blank"> HERE</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- end of single info -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end of info-cards section -->
+
+  <!-- pcs calculation section -->
+  <section id="pcs" class="epcs calculator py-3 mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-8 col-sm-10 mx-auto">
+
+          <h3 class="py-2 text-center">PCS Calculator</h3>
+          <div class="container-form">
+            <!-- <form onsubmit="calculate();"> -->
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Product name </th>
+                  <th scope="col" class="text-center">
+                    <a class="badge badge-light badge-info p-2" href="#" data-toggle="modal"
+                      data-target="#amount_cooked">Amount cooked</a>
+                  </th>
+                  <th scope="col" class="text-center">
+                    <a class="badge badge-light badge-info p-2" href="#" data-toggle="modal" data-target="#sold">Amount
+                      sold</a>
+                  </th>
+                  <th scope="col" class="text-center">
+                    <a class="badge badge-light badge-info p-2" href="#" data-toggle="modal"
+                      data-target="#physical_waste">Physical waste</a>
+                  </th>
+                  <th scope="col" class="text-center">
+                    <a class="badge badge-light badge-info p-2" href="#" data-toggle="modal"
+                      data-target="#accounted_for">Total accounted for</a>
+                  </th>
+                  <th scope="col" class="text-center">
+                    <a class="badge badge-light badge-info p-2" href="#" data-toggle="modal"
+                      data-target="#variance_pc">Variance pc</a>
+                  </th>
+                  <th scope="col" class="text-center">
+                    <a class="badge badge-light badge-info p-2" href="#" data-toggle="modal"
+                      data-target="#variance_proc">Variance %</a>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- single row -->
+                <tr>
+                  <th scope="row">OR Chicken**</th>
+                  <td>
+                    <div class="input-group">
+                      <input type="number" class="form-control item-numbers" id="chicken-cooked"
+                        aria-describedby="chicken">
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="pcs_chicken_pc"></span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="chicken-sold" aria-describedby="chicken">
+                  </td>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="chicken-waste"
+                      aria-describedby="chicken">
+                  </td>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="chicken-acc-for"
+                      aria-describedby="chicken" disabled>
+                  </td>
+                  <td>
+                    <input type="text" class="form-control item-numbers text-dark" id="chicken-var-pc"
+                      aria-describedby="chicken" disabled>
+                  </td>
+                  <td>
+                    <input type="text" class="form-control item-numbers text-light" id="chicken-var-proc"
+                      aria-describedby="chicken" disabled>
+                  </td>
+                </tr>
+                <!-- end of single row -->
+
+                <!-- single row -->
+                <tr>
+                  <th scope="row">OR Fillets</th>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="fillet-cooked"
+                      aria-describedby="chicken">
+                  </td>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="fillet-sold" aria-describedby="chicken">
+                  </td>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="fillet-waste" aria-describedby="chicken">
+                  </td>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="fillet-acc-for"
+                      aria-describedby="chicken" disabled>
+                  </td>
+                  <td>
+                    <input type="text" class="form-control item-numbers text-dark" id="fillet-var-pc"
+                      aria-describedby="chicken" disabled>
+                  </td>
+                  <td>
+                    <input type="text" class="form-control item-numbers text-light" id="fillet-var-proc"
+                      aria-describedby="chicken" disabled>
+                  </td>
+                </tr>
+                <!-- end of single row -->
+
+                <!-- single row -->
+                <tr>
+                  <th scope="row">Mini Fillets</th>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="mf-cooked" aria-describedby="chicken">
+                  </td>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="mf-sold" aria-describedby="chicken">
+                  </td>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="mf-waste" aria-describedby="chicken">
+                  </td>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="mf-acc-for" aria-describedby="chicken"
+                      disabled>
+                  </td>
+                  <td>
+                    <input type="text" class="form-control item-numbers text-dark" id="mf-var-pc"
+                      aria-describedby="chicken" disabled>
+                  </td>
+                  <td>
+                    <input type="text" class="form-control item-numbers text-light" id="mf-var-proc"
+                      aria-describedby="chicken" disabled>
+                  </td>
+                </tr>
+                <!-- end of single row -->
+
+                <!-- single row -->
+                <tr>
+                  <th scope="row">ISP Zinger</th>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="zinger-cooked"
+                      aria-describedby="chicken">
+                  </td>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="zinger-sold" aria-describedby="chicken">
+                  </td>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="zinger-waste" aria-describedby="chicken">
+                  </td>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="zinger-acc-for"
+                      aria-describedby="chicken" disabled>
+                  </td>
+                  <td>
+                    <input type="text" class="form-control item-numbers text-dark" id="zinger-var-pc"
+                      aria-describedby="chicken" disabled>
+                  </td>
+                  <td>
+                    <input type="text" class="form-control item-numbers text-light" id="zinger-var-proc"
+                      aria-describedby="chicken" disabled>
+                  </td>
+                </tr>
+                <!-- end of single row -->
+
+                <!-- single row -->
+                <tr>
+                  <th scope="row">Hot Wings</th>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="hw-cooked" aria-describedby="chicken">
+                  </td>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="hw-sold" aria-describedby="chicken">
+                  </td>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="hw-waste" aria-describedby="chicken">
+                  </td>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="hw-acc-for" aria-describedby="chicken"
+                      disabled>
+                  </td>
+                  <td>
+                    <input type="text" class="form-control item-numbers text-dark" id="hw-var-pc"
+                      aria-describedby="chicken" disabled>
+                  </td>
+                  <td>
+                    <input type="text" class="form-control item-numbers text-light" id="hw-var-proc"
+                      aria-describedby="chicken" disabled>
+                  </td>
+                </tr>
+                <!-- end of single row -->
+
+                <!-- single row for OTHER-->
+                <tr>
+                  <th scope="row">
+                    <input type="text" class="form-control item-numbers item-other" id="other-name"
+                      aria-describedby="other" placeholder="Other">
+                  </th>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="other-cooked" aria-describedby="chicken">
+                  </td>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="other-sold" aria-describedby="chicken">
+                  </td>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="other-waste" aria-describedby="chicken">
+                  </td>
+                  <td>
+                    <input type="number" class="form-control item-numbers" id="other-acc-for" aria-describedby="chicken"
+                      disabled>
+                  </td>
+                  <td>
+                    <input type="text" class="form-control item-numbers text-dark" id="other-var-pc"
+                      aria-describedby="chicken" disabled>
+                  </td>
+                  <td>
+                    <input type="text" class="form-control item-numbers text-light" id="other-var-proc"
+                      aria-describedby="chicken" disabled>
+                  </td>
+                </tr>
+                <!-- end of single row for OTHER-->
+              </tbody>
+            </table>
+            <p class="muted small chicken-pc">** for "Amount cooked" field enter number of chicken heads, total number
+              calculated from paper PCS. Any other field enter chicken pieces as from reports</p>
+            <button type="submit" class="btn btn-danger" onclick="calculate();">Calculate</button>
+            <!-- alert maeesage will be placed in this div by app.js -->
+            <div class="d-none alert alert-success mt-2" id="abuse-text" role="alert"></div>
+            <!-- </form> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end of epcs calculation section -->
+
+
+  <!-- modal amont cooked -->
+  <div class="modal fade" id="amount_cooked" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h5 class="modal-title ">How to find AMOUNT COOKED</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-10 mx-auto">
+                <div class="div-img">
+                  <img src="../img/psc_example2.jpg" alt="" class="img-fluid img-report">
+                </div>
+                <ol class="mt-3">
+                  <li class="list-item">You will need <a href="../img/psc_example2.jpg" target="_blank"
+                      class="info-card-link">Product control sheet</a></li>
+                  <li class="list-item">Add all cooked product (summary of all entries) </li>
+                  <li class="list-item">In example above, it would be:
+                    <ul>
+                      <li class="list-item inner-link">
+                        15+15+15+15+20+30+27+20+20 = 177
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="list-item">Enter this number into web form, under 'Amount cooked' field</li>
+                  <li class="list-item">For chciekn add all numbers as for all other products. Heads will be
+                    recalculated into pieces for you.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of modal amont cooked -->
+
+  <!-- modal sold -->
+  <div class="modal fade" id="sold" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h5 class="modal-title ">How to find AMOUNT SOLD</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-10 mx-auto">
+                <div class="div-img">
+                  <img src="../img/piece_count_example.jpg" alt="" class="img-fluid img-report">
+                </div>
+                <ol class="mt-3">
+                  <li class="list-item">You will need <a href="instructions.html#pcr" target="_blank"
+                      class="info-card-link">Piece Count Report</a>
+                    <p class="muted small">Somethimes this report is called Key Items Sales Report</p>
+                  </li>
+                  <li class="list-item">Look for product name at the top of the report </li>
+                  <li class="list-item">Look for the Total number at the bottom of the report. In exapmle above, you
+                    will look for:
+                    <ul>
+                      <li class="list-item inner-link">
+                        33 for Zinger
+                      </li>
+                      <li class="list-item inner-link">
+                        180 for Chicken
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="list-item">Enter this number into web form, under 'Amount sold' field</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of modal sold -->
+
+  <!-- modal physical waste -->
+  <div class="modal fade" id="physical_waste" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h5 class="modal-title ">How to find PHYSICAL WASTE</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-10 mx-auto">
+                <div class="div-img">
+                  <img src="../img/DailyScorecard_example.jpg" alt="" class="img-fluid img-report">
+                </div>
+                <ol class="mt-3">
+                  <li class="list-item">You will need <a href="instructions.html#dbsc" target="_blank"
+                      class="info-card-link">Daily Scorecard Report</a>
+                  </li>
+                  <li class="list-item">Find product name on the left hand side of the report </li>
+                  <li class="list-item">Look for "Waste" column in the report. In exapmle above, you will look for:
+                    <ul>
+                      <li class="list-item inner-link">
+                        Chicken original (pieces)
+                      </li>
+                      <li class="list-item inner-link">
+                        Waste = 23
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="list-item">Enter this number into web form, under 'Physical waste' field</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of modal physical waste -->
+
+  <!-- modal accounted for -->
+  <div class="modal fade" id="accounted_for" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h5 class="modal-title ">Amount ACCOUNTED FOR</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-10 mx-auto">
+                <div class="div-img">
+                  <img src="../img/ex.jpg" alt="" class="img-fluid img-report">
+                </div>
+                <ol class="mt-3">
+                  <li class="list-item">This filed is to help you to understand varainces - it is calculated for you.
+                  </li>
+                  <li class="list-item">Amount Accounted For = Product Sold + Physical waste</li>
+                  <li class="list-item"> Where the numbers are coming from:
+                    <ul>
+                      <li class="list-item inner-link">
+                        Product sold is taken from Piece Count Report
+                      </li>
+                      <li class="list-item inner-link">
+                        Physical waste is taken from DailyScorecard report
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of modal accounted for -->
+
+  <!-- modal varaince pieces -->
+  <div class="modal fade" id="variance_pc" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">How VARIANCE pieces is calculated</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-10 mx-auto">
+                <div class="div-img">
+                  <img src="../img/none.jpg" alt="" class="img-fluid img-report">
+                </div>
+                <ol class="mt-3">
+                  <li class="list-item">This filed is calculated for you. </li>
+                  <li class="list-item">This filed is to show you difference between product recorded in PCS and total
+                    product accounted for (sold + waste). </li>
+                  <li class="list-item">Variance quantities (pieces) = (Amount Recorded in PCS) - (Amount Accounted For)
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of modal variance pieces -->
+
+
+  <!-- modal varaince procent -->
+  <div class="modal fade" id="variance_proc" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">How VARIANCE % is calculated</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-10 mx-auto">
+                <div class="div-img">
+                  <img src="../img/none.jpg" alt="" class="img-fluid img-report">
+                </div>
+                <ol class="mt-3">
+                  <li class="list-item">This filed is calculated for you. </li>
+                  <li class="list-item">If this filed is greater than 10%, it indicates that PCS wasn't recorded
+                    correctly for that product.</li>
+                  <li class="list-item">If variance is greater than 10% for TWO or more products, it's PCS abuse.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of modal variance procent -->
+
+  <!-- Footer -->
+<footer class="footer bg-dark">
+
+  <!-- Copyright -->
+  <div class="text-light text-center py-3">© 2020 Copyright:
+    <p class="small"> Radek Wilk</p>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+  <!-- jquery -->
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <!-- script js -->
+  <script src="../js/app_pcs.js"></script>
+</body>
+
+</html>
