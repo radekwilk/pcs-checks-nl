@@ -314,6 +314,64 @@ function calculate_hw() {
 
 }
 
+// function to calculate Veggie Tenders varaince (actual vs pcs)
+function calculate_vt() {
+  // get number of cooked pieces and convert to int number
+  var vtAmount = document.getElementById("vt-cooked").value;
+  if (vtAmount == "") {
+    vtAmount = 0;
+  }
+  vtAmount = parseInt(vtAmount,10);
+
+// get number pieces sold and convert to int number
+  var vtSold = document.getElementById("vt-sold").value;
+  if (vtSold == "") {
+    vtSold = 0;
+  }
+  vtSold = parseInt(vtSold,10);
+
+// get number of physicaly wasted pieces and convert to int number
+    var vtWasted = document.getElementById("vt-waste").value;
+    if (vtWasted == "") {
+      vtWasted = 0;
+    }
+    vtWasted = parseInt(vtWasted,10);
+
+// get number of pieces accounted for (sold + waste) and convert to int number
+  var vtAccFor = 0;
+  vtAccFor = vtSold + vtWasted;
+  vtAccFor = parseInt(vtAccFor,10);
+
+
+// calculate variance between physical waste and epcs waste
+  var varaincePieces = (vtAmount - vtAccFor);
+  var diff = (varaincePieces/vtAccFor) * 100;
+  diff = parseFloat(diff);
+  diff = diff.toFixed(2);
+
+
+// if var greater that 10% add danger class, otherwise add success class
+  if(diff > -10 && diff < 10) {
+    removeClass("vt-var-proc", "bg-danger");
+    addClass("vt-var-proc", "bg-success");
+  } else if(diff <= -10 || diff >= 10){
+    removeClass("vt-var-proc", "bg-sucess");
+    addClass("vt-var-proc", "bg-danger");
+    abuse_pcs = abuse_pcs + 1;
+  } else {
+    removeClass("vt-var-proc", "bg-danger");
+    removeClass("vt-var-proc", "bg-sucess");
+    addClass("vt-var-proc", "bg-secondary");
+  }
+
+   // alert(vtAmount + " " + vtSold  + " " + vtAccFor  + " " + vtWasted);
+   // alert(diff);
+   document.getElementById("vt-acc-for").value = (vtAccFor);
+   document.getElementById("vt-var-pc").value = (varaincePieces);
+   document.getElementById("vt-var-proc").value = (diff + "%");
+
+}
+
 // function to calculate OTHER product varaince (actual vs pcs)
 function calculate_other() {
   // get number of cooked pieces and convert to int number
@@ -411,6 +469,7 @@ function calculate() {
   calculate_mf();
   calculate_zinger();
   calculate_hw();
+  calculate_vt();
   calculate_other();
 
 // use value returned by checkIfAbused function

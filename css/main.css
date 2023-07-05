@@ -61,6 +61,8 @@ body {
     url(../img/clock_bk.jpg);
   background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
     url(../img/clock_bk.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .pcs-systems {
